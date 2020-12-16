@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.172 2019/08/19 16:59:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.174 2020/12/04 20:45:27 nia Exp $
 
 DISTNAME=		getmail-5.14
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}old-versions/
 
@@ -12,7 +13,7 @@ LICENSE=		gnu-gpl-v2
 USE_LANGUAGES=		# none
 
 REPLACE_PYTHON=		*.py getmailcore/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 4.53.0
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 4.53.0
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
